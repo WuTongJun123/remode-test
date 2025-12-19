@@ -1,10 +1,259 @@
-<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/143.0.0.0 Safari/537.36 Edg/143.0.0.0" version="29.2.7">
-  <diagram name="大学校园论坛DFD图" id="4q8UBfKhRkVtW9vXDs3q">
-    <mxGraphModel dx="1445" dy="767" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
-      <root>
-        <mxCell id="0" />
-        <mxCell id="1" parent="0" />
-      </root>
-    </mxGraphModel>
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" modified="2024-01-15T10:30:00.000Z" agent="Mozilla/5.0" version="24.0.7" type="device">
+  <diagram name="大学校园论坛DFD图" id="sUzYc0JapCMe2SY8h_4T">
+    <!-- 顶层数据流图 -->
+    <mxCell id="0" />
+    <mxCell id="1" parent="0" />
+    
+    <!-- 创建画布和图层 -->
+    <mxCell id="root" value="" style="whiteSpace=wrap;html=1;fillColor=#ffffff;" vertex="1" parent="1">
+      <mxGeometry x="0" y="0" width="1600" height="1200" as="geometry" />
+    </mxCell>
+    
+    <!-- ==================== 顶层图 ==================== -->
+    <mxCell id="layer-top" value="顶层数据流图 (Context Diagram)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="root">
+      <mxGeometry x="50" y="20" width="200" height="30" as="geometry" />
+    </mxCell>
+    
+    <!-- 外部实体：用户 -->
+    <mxCell id="E1" value="用户" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#f3e5f5;strokeColor=#4a148c;" vertex="1" parent="root">
+      <mxGeometry x="100" y="100" width="150" height="200" as="geometry" />
+    </mxCell>
+    <mxCell id="E1-header" value="" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingTop=0;spacingLeft=0;spacingRight=0;spacingBottom=0;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="E1">
+      <mxGeometry y="26" width="150" height="8" as="geometry" />
+    </mxCell>
+    <mxCell id="E1-body" value="User" style="text;align=center;verticalAlign=middle;spacing=0;spacingTop=-6;whiteSpace=wrap;overflow=hidden;fillColor=none;strokeColor=none;" vertex="1" parent="E1">
+      <mxGeometry y="34" width="150" height="166" as="geometry" />
+    </mxCell>
+    
+    <!-- 外部实体：管理员 -->
+    <mxCell id="E2" value="管理员" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fillColor=#f1f8e9;strokeColor=#33691e;" vertex="1" parent="root">
+      <mxGeometry x="1250" y="100" width="150" height="200" as="geometry" />
+    </mxCell>
+    <mxCell id="E2-header" value="" style="text;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;spacingTop=0;spacingLeft=0;spacingRight=0;spacingBottom=0;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" vertex="1" parent="E2">
+      <mxGeometry y="26" width="150" height="8" as="geometry" />
+    </mxCell>
+    <mxCell id="E2-body" value="Administrator" style="text;align=center;verticalAlign=middle;spacing=0;spacingTop=-6;whiteSpace=wrap;overflow=hidden;fillColor=none;strokeColor=none;" vertex="1" parent="E2">
+      <mxGeometry y="34" width="150" height="166" as="geometry" />
+    </mxCell>
+    
+    <!-- 处理过程：系统 -->
+    <mxCell id="P0" value="大学校园论坛系统" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;strokeColor=#01579b;strokeWidth=2;" vertex="1" parent="root">
+      <mxGeometry x="550" y="150" width="300" height="100" as="geometry" />
+    </mxCell>
+    
+    <!-- 数据流：用户到系统 -->
+    <mxCell id="flow1" value="用户注册数据" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;entryX=0.25;entryY=1;endFill=1;strokeColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="root" source="E1" target="P0">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="flow2" value="登录凭证" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;entryX=0.5;entryY=1;endFill=1;strokeColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="root" source="E1" target="P0">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="flow3" value="文章发布数据" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;entryX=0.75;entryY=1;endFill=1;strokeColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="root" source="E1" target="P0">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    
+    <!-- 数据流：系统到用户 -->
+    <mxCell id="flow4" value="注册确认信息" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=0;entryX=0.5;entryY=1;endFill=1;strokeColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="root" source="P0" target="E1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="flow5" value="文章列表数据" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;entryX=0.5;entryY=1;endFill=1;strokeColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="root" source="P0" target="E1">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    
+    <!-- 数据流：管理员到系统 -->
+    <mxCell id="flow6" value="用户管理指令" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;entryX=0.25;entryY=1;endFill=1;strokeColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="root" source="E2" target="P0">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="flow7" value="文章审核数据" style="endArrow=classic;html=1;rounded=0;exitX=0.5;exitY=0;entryX=0.75;entryY=1;endFill=1;strokeColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="root" source="E2" target="P0">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    
+    <!-- 数据流：系统到管理员 -->
+    <mxCell id="flow8" value="用户统计数据" style="endArrow=classic;html=1;rounded=0;exitX=0.25;exitY=0;entryX=0.5;entryY=1;endFill=1;strokeColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="root" source="P0" target="E2">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    <mxCell id="flow9" value="系统运行状态" style="endArrow=classic;html=1;rounded=0;exitX=0.75;exitY=0;entryX=0.5;entryY=1;endFill=1;strokeColor=#000000;labelBackgroundColor=#ffffff;" edge="1" parent="root" source="P0" target="E2">
+      <mxGeometry relative="1" as="geometry" />
+    </mxCell>
+    
+    <!-- ==================== 0层图 ==================== -->
+    <!-- 创建新页面用于0层图 -->
+    <mxCell id="page0" value="0层数据流图" style="swimlane;whiteSpace=wrap;html=1;fillColor=#ffffff;" vertex="1" parent="1">
+      <mxGeometry x="0" y="0" width="1600" height="1200" as="geometry" />
+    </mxCell>
+    
+    <!-- 0层图标题 -->
+    <mxCell id="title0" value="0层数据流图 (Level 0 DFD)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="page0">
+      <mxGeometry x="50" y="20" width="200" height="30" as="geometry" />
+    </mxCell>
+    
+    <!-- 外部实体 -->
+    <mxCell id="E1-0" value="用户" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#4a148c;" vertex="1" parent="page0">
+      <mxGeometry x="50" y="100" width="80" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="E2-0" value="管理员" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#33691e;" vertex="1" parent="page0">
+      <mxGeometry x="1450" y="100" width="80" height="40" as="geometry" />
+    </mxCell>
+    
+    <!-- 处理过程 -->
+    <mxCell id="P1-0" value="1.0&#xa;用户管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;" vertex="1" parent="page0">
+      <mxGeometry x="200" y="100" width="100" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="P2-0" value="2.0&#xa;文章管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;" vertex="1" parent="page0">
+      <mxGeometry x="200" y="200" width="100" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="P3-0" value="3.0&#xa;类型管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;" vertex="1" parent="page0">
+      <mxGeometry x="200" y="300" width="100" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="P4-0" value="4.0&#xa;评论管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e0f2f1;" vertex="1" parent="page0">
+      <mxGeometry x="200" y="400" width="100" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="P5-0" value="5.0&#xa;论坛核心" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;" vertex="1" parent="page0">
+      <mxGeometry x="200" y="500" width="100" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="P6-0" value="6.0&#xa;系统管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f8e9;" vertex="1" parent="page0">
+      <mxGeometry x="200" y="600" width="100" height="60" as="geometry" />
+    </mxCell>
+    
+    <!-- 数据存储 -->
+    <mxCell id="D1-0" value="D1&#xa;用户数据" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#e1f5fe;strokeColor=#000000;" vertex="1" parent="page0">
+      <mxGeometry x="800" y="100" width="80" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="D2-0" value="D2&#xa;文章数据" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#f1f8e9;strokeColor=#000000;" vertex="1" parent="page0">
+      <mxGeometry x="800" y="200" width="80" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="D3-0" value="D3&#xa;类型数据" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#fff3e0;strokeColor=#000000;" vertex="1" parent="page0">
+      <mxGeometry x="800" y="300" width="80" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="D4-0" value="D4&#xa;评论数据" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#fce4ec;strokeColor=#000000;" vertex="1" parent="page0">
+      <mxGeometry x="800" y="400" width="80" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="D5-0" value="D5&#xa;收藏数据" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#e8f5e8;strokeColor=#000000;" vertex="1" parent="page0">
+      <mxGeometry x="800" y="500" width="80" height="60" as="geometry" />
+    </mxCell>
+    
+    <!-- ==================== 1层图（文章管理） ==================== -->
+    <!-- 创建新页面用于1层图 -->
+    <mxCell id="page1" value="1层数据流图-文章管理" style="swimlane;whiteSpace=wrap;html=1;fillColor=#ffffff;" vertex="1" parent="1">
+      <mxGeometry x="0" y="0" width="1600" height="1200" as="geometry" />
+    </mxCell>
+    
+    <!-- 1层图标题 -->
+    <mxCell id="title1" value="1层数据流图 - 文章管理子系统 (2.0)" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="page1">
+      <mxGeometry x="50" y="20" width="300" height="30" as="geometry" />
+    </mxCell>
+    
+    <!-- 外部实体（1层图中只显示直接相关的） -->
+    <mxCell id="E1-1" value="用户" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#4a148c;" vertex="1" parent="page1">
+      <mxGeometry x="50" y="100" width="80" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="E2-1" value="管理员" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f1f8e9;strokeColor=#33691e;" vertex="1" parent="page1">
+      <mxGeometry x="1450" y="100" width="80" height="40" as="geometry" />
+    </mxCell>
+    
+    <!-- 相关处理过程 -->
+    <mxCell id="P1-1" value="1.0&#xa;用户管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;" vertex="1" parent="page1">
+      <mxGeometry x="50" y="300" width="100" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="P3-1" value="3.0&#xa;类型管理" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;" vertex="1" parent="page1">
+      <mxGeometry x="50" y="500" width="100" height="60" as="geometry" />
+    </mxCell>
+    
+    <!-- 文章管理子系统处理过程 -->
+    <mxCell id="P2_1-1" value="2.1&#xa;文章发布" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;" vertex="1" parent="page1">
+      <mxGeometry x="400" y="100" width="100" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="P2_2-1" value="2.2&#xa;文章查询" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e1f5fe;" vertex="1" parent="page1">
+      <mxGeometry x="400" y="200" width="100" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="P2_3-1" value="2.3&#xa;文章编辑" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fff3e0;" vertex="1" parent="page1">
+      <mxGeometry x="400" y="300" width="100" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="P2_4-1" value="2.4&#xa;文章删除" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#fce4ec;" vertex="1" parent="page1">
+      <mxGeometry x="400" y="400" width="100" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="P2_5-1" value="2.5&#xa;文章审核" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f3e5f5;" vertex="1" parent="page1">
+      <mxGeometry x="400" y="500" width="100" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="P2_6-1" value="2.6&#xa;文章统计" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#f1f8e9;" vertex="1" parent="page1">
+      <mxGeometry x="400" y="600" width="100" height="60" as="geometry" />
+    </mxCell>
+    
+    <!-- 数据存储 -->
+    <mxCell id="D1-1" value="D1&#xa;用户数据" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#e1f5fe;strokeColor=#000000;" vertex="1" parent="page1">
+      <mxGeometry x="1000" y="200" width="80" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="D2-1" value="D2&#xa;文章数据" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#f1f8e9;strokeColor=#000000;" vertex="1" parent="page1">
+      <mxGeometry x="1000" y="300" width="80" height="60" as="geometry" />
+    </mxCell>
+    <mxCell id="D3-1" value="D3&#xa;类型数据" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#fff3e0;strokeColor=#000000;" vertex="1" parent="page1">
+      <mxGeometry x="1000" y="400" width="80" height="60" as="geometry" />
+    </mxCell>
+    
+    <!-- ==================== 图例 ==================== -->
+    <!-- 创建新页面用于图例 -->
+    <mxCell id="page-legend" value="DFD图例" style="swimlane;whiteSpace=wrap;html=1;fillColor=#ffffff;" vertex="1" parent="1">
+      <mxGeometry x="0" y="0" width="800" height="600" as="geometry" />
+    </mxCell>
+    
+    <mxCell id="legend-title" value="DFD符号图例" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontSize=16;" vertex="1" parent="page-legend">
+      <mxGeometry x="50" y="20" width="150" height="30" as="geometry" />
+    </mxCell>
+    
+    <!-- 外部实体示例 -->
+    <mxCell id="legend-e1" value="外部实体" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f3e5f5;strokeColor=#4a148c;" vertex="1" parent="page-legend">
+      <mxGeometry x="100" y="100" width="100" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="legend-e1-text" value="系统外部的数据源或目的地" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="page-legend">
+      <mxGeometry x="220" y="110" width="200" height="20" as="geometry" />
+    </mxCell>
+    
+    <!-- 处理过程示例 -->
+    <mxCell id="legend-p1" value="处理过程" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#e8f5e8;strokeColor=#000000;" vertex="1" parent="page-legend">
+      <mxGeometry x="100" y="150" width="100" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="legend-p1-text" value="对数据进行转换的处理单元" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="page-legend">
+      <mxGeometry x="220" y="160" width="200" height="20" as="geometry" />
+    </mxCell>
+    
+    <!-- 数据存储示例 -->
+    <mxCell id="legend-d1" value="数据存储" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;fillColor=#e1f5fe;strokeColor=#000000;" vertex="1" parent="page-legend">
+      <mxGeometry x="100" y="200" width="100" height="40" as="geometry" />
+    </mxCell>
+    <mxCell id="legend-d1-text" value="数据存储位置" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="page-legend">
+      <mxGeometry x="220" y="210" width="200" height="20" as="geometry" />
+    </mxCell>
+    
+    <!-- 数据流示例 -->
+    <mxCell id="legend-f1" value="" style="endArrow=classic;html=1;rounded=0;strokeColor=#000000;strokeWidth=1;" edge="1" parent="page-legend" source="legend-flow-start" target="legend-flow-end">
+      <mxGeometry width="50" height="50" relative="1" as="geometry">
+        <mxPoint x="120" y="260" as="sourcePoint" />
+        <mxPoint x="220" y="260" as="targetPoint" />
+      </mxGeometry>
+    </mxCell>
+    <mxCell id="legend-flow-start" value="" style="shape=point;whiteSpace=wrap;html=1;" vertex="1" parent="page-legend">
+      <mxGeometry x="100" y="260" width="10" height="10" as="geometry" />
+    </mxCell>
+    <mxCell id="legend-flow-end" value="" style="shape=point;whiteSpace=wrap;html=1;" vertex="1" parent="page-legend">
+      <mxGeometry x="200" y="260" width="10" height="10" as="geometry" />
+    </mxCell>
+    <mxCell id="legend-f1-text" value="数据流方向" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="page-legend">
+      <mxGeometry x="220" y="255" width="200" height="20" as="geometry" />
+    </mxCell>
+    
+    <!-- 编号系统说明 -->
+    <mxCell id="legend-num1" value="编号系统说明" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontStyle=1;" vertex="1" parent="page-legend">
+      <mxGeometry x="100" y="300" width="120" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="legend-num2" value="• 0层：1.0, 2.0, 3.0..." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="page-legend">
+      <mxGeometry x="120" y="330" width="200" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="legend-num3" value="• 1层：2.1, 2.2, 2.3..." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="page-legend">
+      <mxGeometry x="120" y="350" width="200" height="20" as="geometry" />
+    </mxCell>
+    <mxCell id="legend-num4" value="• 数据存储：D1, D2, D3..." style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="page-legend">
+      <mxGeometry x="120" y="370" width="200" height="20" as="geometry" />
+    </mxCell>
   </diagram>
 </mxfile>
